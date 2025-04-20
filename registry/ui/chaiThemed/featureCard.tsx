@@ -23,7 +23,7 @@ function FeatureCard({
       } 
       feature-card rounded-2xl p-6 shadow-md group transition-all duration-300 hover:shadow-lg hover:-translate-y-1 w-64 h-64 flex flex-col`}
     >
-      {/* Icon */}
+
       <div
         className={`${
           ChaiTheme ? "bg-amber-100 dark:bg-amber-800" : "bg-neutral-100 dark:bg-neutral-700"
@@ -32,7 +32,6 @@ function FeatureCard({
         {icon}
       </div>
 
-      {/* Title */}
       <h3
         className={`text-xl font-bold mb-2 ${
           ChaiTheme ? "text-amber-900 dark:text-amber-100" : ""
@@ -41,7 +40,7 @@ function FeatureCard({
         {title}
       </h3>
 
-      {/* Description */}
+  
       <p
         className={`text-sm flex-grow ${
           ChaiTheme

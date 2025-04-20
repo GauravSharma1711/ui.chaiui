@@ -2,7 +2,7 @@
 title: CracklingCard
 description: Gradient animated card for your awesome ui design
 ---
-{/* priview code  */}
+
 import {ComponentPreview} from "../../../src/app/components/mainPreview/ComponentPreview/ComponentPreview"
 
 import { CracklingCard } from "../../codeWrittenText/buttonCode/cards"
@@ -11,7 +11,7 @@ import CracklingAnimatedCard from "../../../src/app/components/AllAnimatedCards/
 
 ## Overview
 
-The `CracklingCard` component is a visually appealing UI card that features a glowing and lifting effect when hovered. It’s designed to draw attention and add interactivity to your interface.
+The `Crackling Card` features a smooth gradient transition with vibrant colors, adding a dynamic and visually striking element to your interface.
 
 Key features include:
 
@@ -39,7 +39,7 @@ To manually set up the `GlowLiftCard ` component in your project, follow these s
 
 1. Go to your `src` directory.
 2. Create a folder structure: `components/ui/cracklingcard`.
-3. Inside the `glowLiftCard` folder, create a file named `cracklingcard.tsx`.
+3. Inside the `cracklingCard` folder, create a file named `cracklingcard.tsx`.
 4. Paste the following code into `cracklingcard.tsx`.
 
 ```tsx
@@ -48,7 +48,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
 
-// 1. Define card variants
+
 const cracklingCardVariants = cva(
   "relative p-[3px] rounded-xl animate-border overflow-hidden",
   {
@@ -70,7 +70,7 @@ const cracklingCardVariants = cva(
   }
 );
 
-// 2. Define props
+
 type CracklingCardProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof cracklingCardVariants> & {
     title?: string;
@@ -78,7 +78,7 @@ type CracklingCardProps = React.HTMLAttributes<HTMLDivElement> &
     animationDuration?: string;
   };
 
-// 3. Component
+
 const CracklingCard: React.FC<CracklingCardProps> = ({
   title = "Crackling Border",
   description = "This card has a sparkly moving border!",
@@ -97,7 +97,7 @@ const CracklingCard: React.FC<CracklingCardProps> = ({
         </div>
       </div>
 
-      {/* Dynamic animation styles */}
+
       <style>{`
         @keyframes crackle-border {
           0% { background-position: 0% 50%; }
@@ -128,7 +128,7 @@ export default CracklingCard;
 Import and use the `GlowLiftCard ` component like this:
 
 ```tsx
-import GlowLiftCard from "@/components/ui/animatedCards/cracklingcard";
+import CracklingCard from "@/components/ui/animatedCards/cracklingcard";
    <CracklingCard
         size="lg"
         variant="dark"
@@ -146,7 +146,7 @@ import GlowLiftCard from "@/components/ui/animatedCards/cracklingcard";
 |-------------|------------|--------------------------------------------------|-----------------------------------|-------------------|
 | `size`     | `string`   | The size of the card                              | `"lg"`                            | `sm` `md` `lg`    |
 | `variant`     | `string`   | The color of the card                          | `"default"`                       | `default` `dark`  |
-| `title`     | `string`   | The title displayed on the card                  | `"Cosmic Card"`                   |                   |
-| `description` | `string`   | 	The description text under the title          | `"With a glowy magical border!"`  |                   |
-| `className` | `string`   | 	Additional Tailwind classes for outer container | `""`                              |                   |
+| `title`     | `string`   | The title displayed on the card                  | `"Cosmic Card"`                   |      `""`         |
+| `description` | `string`   | 	The description text under the title          | `"With a glowy magical border!"`  |      `""`         |
+| `className` | `string`   | 	Additional Tailwind classes for outer container | `""`                              |        `""`       |
 ---

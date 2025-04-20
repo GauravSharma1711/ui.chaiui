@@ -30,14 +30,14 @@ function TestimonialCard({
           : "bg-gray-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200"
       }`}
     >
-      {/* Header */}
+
       <div className="flex items-center justify-between mb-6">
         <div className="w-14 h-14 rounded-full overflow-hidden border dark:border-gray-700">
           {personImage ? (
-            <img
+            <img 
               src={personImage}
               alt={personName}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover -translate-y-8"
             />
           ) : (
             <div
@@ -65,7 +65,7 @@ function TestimonialCard({
         </div>
       </div>
 
-      {/* Quotation mark */}
+   
       <div
         className={`text-5xl font-serif mb-1.5 ${
           ChaiTheme
@@ -76,7 +76,7 @@ function TestimonialCard({
         "
       </div>
 
-      {/* Testimonial Text */}
+
       <div className="flex-grow mb-6">
         <div
           className={`text-base leading-relaxed line-clamp-4 ${
@@ -89,7 +89,7 @@ function TestimonialCard({
         </div>
       </div>
 
-      {/* Footer */}
+
       <div
         className={`border-l-2 pl-4 py-1 ${
           ChaiTheme

@@ -28,7 +28,7 @@ function ChaiTabs({
           : "bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200"
       }`}
     >
-      {/* Title Tabs */}
+   
       <div className="flex flex-wrap justify-center gap-2 sm:space-x-4 mb-6">
         {tabsData.map((tab, index) => (
           <button
@@ -49,7 +49,7 @@ function ChaiTabs({
         ))}
       </div>
 
-      {/* Tab Content */}
+ 
       <div
         className={`text-center text-sm md:text-base leading-relaxed transition-opacity duration-300 ease-in-out flex-grow flex items-center justify-center p-4 ${
           ChaiTheme

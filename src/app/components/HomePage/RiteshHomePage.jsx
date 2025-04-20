@@ -1,93 +1,46 @@
-// app/page.tsx or pages/index.tsx (based on your Next.js version)
+// pages/index.tsx
 
-"use client";
+import Head from 'next/head';
+import Image from 'next/image';
 
-import { motion } from "framer-motion";
-import  Buttons  from "../../../../registry/ui/buttons/basicButton"; // Replace with your actual Button import
-import Image from "next/image";
-
-export default function HeroSection() {
+export default function Home() {
   return (
-    <main className="min-h-screen bg-[#fffaf0] flex flex-col md:flex-row items-center justify-between px-6 md:px-20 pt-20 overflow-hidden">
+    <>
+      <Head>
+        <title>Chai UI</title>
+        <meta name="description" content="An open-source React component library brewed with simplicity and chai vibes." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-      <div className="max-w-xl z-10">
-        <h1 className="text-5xl md:text-6xl font-bold text-[#1c1c1c] leading-tight">
-          Brew Better UIs <br /> with <span className="text-[#d97706]">ChaiUI</span>
-        </h1>
-        <p className="mt-4 text-lg text-gray-700">
-          A simple, flexible, and spiced-up React component library. <br /> Built for speed. Designed with flavor.
-        </p>
-        <Buttons className="mt-6 px-6 py-3 text-lg rounded-xl bg-[#1c1c1c] text-white hover:bg-[#d97706] transition-all">
-          Start Brewing →
-        </Buttons>
-      </div>
+      <main className="bg-[#0e0e10] text-white min-h-screen">
 
+        <section className="px-6 md:px-20 py-16 flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="max-w-xl">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Brew beautiful interfaces <br className="hidden md:block" /> with <span className="text-orange-400">Chai UI</span>
+            </h1>
+            <p className="text-neutral-400 text-lg mb-8">
+              An open-source React component library brewed with simplicity, speed, and chai vibes. Designed to help you ship faster and design consistently.
+            </p>
 
-      <div className="relative w-full md:w-[50%] h-[400px] md:h-[600px]">
- 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        >
-          <Image
-            src="/chai-cup.svg"
-            alt="chai cup"
-            width={500}
-            height={500}
-          />
-        </motion.div>
+            <div className="flex gap-4">
+              <a href="#" className="bg-orange-400 text-black px-6 py-3 rounded-lg font-medium hover:bg-orange-300 transition duration-300">Get Started</a>
+              <a href="#components" className="border border-neutral-700 px-6 py-3 rounded-lg font-medium hover:border-white transition duration-300">Explore Components</a>
+            </div>
+          </div>
 
-
-        {flyingComponents.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={item.initial}
-            animate={item.animate}
-            transition={{ repeat: Infinity, duration: 6, delay: index * 0.4 }}
-            className="absolute"
-            style={{ top: item.top, left: item.left }}
-          >
-            <Image src={item.src} alt={item.alt} width={100} height={100} />
-          </motion.div>
-        ))}
-      </div>
-    </main>
+          <div className="relative w-full max-w-lg aspect-square">
+            <Image
+              src="/chai-ui-showcase.png"
+              alt="UI Showcase"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
-
-
-const flyingComponents = [
-    {
-      src: "/assets/images/logos/button-icon.jpeg",
-      alt: "button",
-      top: "10%",
-      left: "80%",
-      width: 140,
-      height: 140,
-      initial: { y: 0, rotate: 0 },
-      animate: { y: [0, -20, 0], rotate: [0, 10, -10, 0] },
-    },
-    {
-      src: "/assets/images/logos/card.jpeg",
-      alt: "card",
-      top: "70%",
-      left: "60%",
-      width: 160,
-      height: 160,
-      initial: { x: 0, y: 0 },
-      animate: { x: [0, 15, -15, 0], y: [0, -10, 10, 0] },
-    },
-    {
-      src: "/assets/images/logos/text.jpeg",
-      alt: "toggle",
-      top: "20%",
-      left: "30%",
-      width: 100,
-      height: 100,
-      initial: { y: 0 },
-      animate: { y: [0, -15, 15, 0] },
-    },
-  ];
-  
