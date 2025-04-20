@@ -50,7 +50,7 @@ const MuksidHomePage = () => {
           ease: "easeInOut",
           repeat: Infinity,
         }}
-        className="absolute hidden md:block left-10 bottom-100 rotate-15 scale-65 hover:scale-75 ">
+        className="absolute hidden xl:block left-10 bottom-100 rotate-15 scale-65 hover:scale-75 ">
         <FlipCard
           front={<div className="text-2xl font-bold">Welcome to ChaiUI</div>}
           back={
@@ -70,7 +70,7 @@ const MuksidHomePage = () => {
           ease: "easeInOut",
           repeat: Infinity,
         }}
-        className="absolute hidden md:block left-40 bottom-30 rotate-15 scale-65 cursor-pointer hover:scale-75">
+        className="absolute hidden xl:block left-40 bottom-30 rotate-15 scale-65 cursor-pointer hover:scale-75">
         <FeatureCard
           title="Chai Feature"
           description="This feature card has the warm ChaiTheme colors applied for a cozy feel."
@@ -89,7 +89,7 @@ const MuksidHomePage = () => {
           ease: "easeInOut",
           repeat: Infinity,
         }}
-        className="absolute hidden md:block right-10 bottom-0 -rotate-20 scale-65 cursor-pointer ">
+        className="absolute hidden xl:block right-10 bottom-0 -rotate-20 scale-65 cursor-pointer ">
         <Reflection
           text="ChaiUI"
           fontSize="8xl"
@@ -107,7 +107,7 @@ const MuksidHomePage = () => {
           ease: "easeInOut",
           repeat: Infinity,
         }}
-        className="absolute right-5 bottom-5 md:right-30 md:bottom-40 -rotate-20 scale-65 cursor-pointer ">
+        className="absolute right-5 bottom-5 xl:right-30 xl:bottom-40 -rotate-20 scale-65 cursor-pointer ">
         <span className=" text-8xl font-black dark:text-chai-dark drop-shadow-[3px_3px_1px_#b07a42]">
           UI{" "}
           <motion.div
