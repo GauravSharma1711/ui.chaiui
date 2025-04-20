@@ -29,26 +29,26 @@ const SimpleCard: React.FC<SimpleCardProps> = ({
           </div>
           
           <div className="px-3 -translate-y-9">
-            {/* Title */}
+      
             <div className={`font-bold text-lg ${ChaiTheme ? 'text-amber-900 dark:text-amber-100' : ''}`}>
               {title}
             </div>
             
-            {/* Sub title */}
+       
             <div className={`text-sm ${ChaiTheme 
               ? 'text-amber-700 dark:text-amber-300' 
               : 'text-gray-500 dark:text-neutral-400'}`}>
               {subtitle}
             </div> 
             
-            {/* Description */}
+       
             <div className={`pt-1 text-xs ${ChaiTheme 
               ? 'text-amber-600 dark:text-amber-400' 
               : 'text-gray-800 dark:text-gray-400'} line-clamp-3`}>
               {desc}
             </div>
             
-            {/* Learn more link */}
+ 
             <a className={`pt-3 opacity-0 group-hover:opacity-100   
               translate-y-2 group-hover:translate-y-0
               transition-all duration-300 ease-in-out 

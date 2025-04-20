@@ -2,7 +2,7 @@
 title: Hover Cracker Animated Card
 description: Your first document
 ---
-{/* priview code  */}
+
 import {ComponentPreview} from "../../../src/app/components/mainPreview/ComponentPreview/ComponentPreview"
 import { FirecrackerCard } from "../../codeWrittenText/buttonCode/cards"
 import FireCrackerAnimatedCard from "../../../src/app/components/AllAnimatedCards/FireCrackerAnimatedCard"
@@ -46,7 +46,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
 
-// 1. Define variants
+
 const firecrackerCardVariants = cva(
   "relative w-full h-full rounded-xl border-2 shadow-xl flex flex-col items-center justify-center transition-all duration-300",
   {
@@ -74,7 +74,7 @@ const firecrackerCardVariants = cva(
   }
 );
 
-// 2. Define props
+
 type FirecrackerCardProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof firecrackerCardVariants> & {
     title?: string;
@@ -82,7 +82,7 @@ type FirecrackerCardProps = React.HTMLAttributes<HTMLDivElement> &
     buttonLabel?: string;
   };
 
-// 3. Component
+
 const FirecrackerCard: React.FC<FirecrackerCardProps> = ({
   title = "Firecracker Card",
   description = "Click below to start the firework show!",
@@ -124,7 +124,7 @@ const FirecrackerCard: React.FC<FirecrackerCardProps> = ({
         )}
       </div>
 
-      {/* Keyframe Animations */}
+
       <style>
         {`
           @keyframes firecracker1 {
@@ -206,7 +206,7 @@ export default function App() {
 | `size`     | `string`   | The size of the card                              | `"md"`                                      | `"sm"` `"md"` `"lg"`    |
 | `variant`     | `string`   | The color of the card                          | `"default"`                                 | `"default"` `"dark"` `"light"`  |
 | `animate`     | `string`   | The title displayed on the card                  | `"false"`                                 |     `"true"`            |
-| `description` | `string`   | 	The description text under the title          | `"Light it up"`                             |                   |
-| `buttonLabel` | `string`   | 	The description text under the button          | `"Hover or click to see the sparks fly!"`  |                   |
-| `className` | `string`   | 	Additional Tailwind classes for outer container | `""`                                        |                   |
+| `description` | `string`   | 	The description text under the title          | `"Light it up"`                             |        `""`            |
+| `buttonLabel` | `string`   | 	The description text under the button          | `"Hover or click to see the sparks fly!"`  |        `""`            |
+| `className` | `string`   | 	Additional Tailwind classes for outer container | `""`                                        |          `""`          |
 ---

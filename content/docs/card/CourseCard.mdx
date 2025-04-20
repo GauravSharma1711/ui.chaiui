@@ -99,7 +99,7 @@ function CourseCard({
         w-72 shadow-md rounded-2xl overflow-hidden
         transition-transform duration-200 group hover:scale-101 hover:shadow-lg flex flex-col`}
     >
-      {/* Image with fixed aspect ratio */}
+   
       <div className="aspect-[4/3] -translate-y-8 w-full overflow-hidden">
         <img
           src={img}
@@ -108,9 +108,9 @@ function CourseCard({
         />
       </div>
 
-      {/* Content */}
+
       <div className="p-4 pt-0 flex-col gap- flex-grow">
-        {/* Tags */}
+
         <div className="flex flex-wrap gap-0">
           {tags.map((tag, i) => (
             <span
@@ -126,25 +126,24 @@ function CourseCard({
           ))}
         </div>
 
-        {/* Title + Subtitle */}
+  
         <div className="-translate-y-5">
           <h2 className="text-base pt-0 font-bold line-clamp-1">{title}</h2>
           <p className="-translate-y-3 line-clamp-1 text-sm pt-0  opacity-80">{subtitle}</p>
         </div>
 
-        {/* Date & Duration */}
+    
         <div className="flex items-center pt-0 -translate-y-9 justify-between text-xs text-gray-500 dark:text-gray-400">
           <span>📅 {startDate}</span>
           <span>⏳ {duration}</span>
         </div>
 
-        {/* Description */}
+   
         <p className={`text-xs line-clamp-3 leading-relaxed pt-0 -translate-y-9
           ${ChaiTheme ? "text-amber-700 dark:text-amber-300" : "text-gray-600 dark:text-gray-300"}`}>
           {desc}
         </p>
 
-        {/* Price & CTA */}
         <div className="pt-2 mt-auto">
           <div className="flex items-center justify-between mb-2">
             <span className="text-lg font-semibold">
